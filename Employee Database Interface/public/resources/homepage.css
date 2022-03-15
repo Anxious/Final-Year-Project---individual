@@ -1,0 +1,105 @@
+/* All css classes used not defined in here are official bootstrap 4 classes and have been imported from their official stylesheet */
+/* Styling for the home page */
+
+/* Importing the custom roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    line-height: 1.4;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    min-height: 100vh;
+    background: #36393f
+}
+
+h1 {
+    margin-top: 2rem;
+    font-size: 6rem;
+    color: white;
+    text-align: center;
+    position: relative;
+    word-spacing: 3px;
+}
+
+.container {
+    width: 80rem;
+    margin: 0 auto;
+}
+
+/* Styling for each employee option */
+.option-container {
+    margin-top: 6rem;
+}
+
+
+.option {
+    background: #2f3136;
+    margin-bottom: 3rem;
+    transform: skewX(-20deg); /* Skews each option to make it's unique shape */
+    display: flex;
+    transition: all 0.5s;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.25);
+    border-radius: 10px 0px;
+    overflow: hidden;
+}
+
+.option_title_box {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.option_title {
+    font-size: 3.25rem;
+    transform: skewX(20deg); /* Cancels the skew of the shape so the text appears horizontally */
+}
+
+/* Setting the details link styling and including the visited preset to prevent links changing colour after previous visits
+   which is a browser default */
+.option_link:link,
+.option_link:visited {
+    background-color: rgb(36, 35, 35);
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 2.5rem;
+    text-align: center;
+    display: flex;
+    color: white;
+    transition: all 0.5s;
+}
+
+.option_link:hover,
+.option_link:active {
+    background-color: #d5842183;
+}
+
+.option_link span {
+    transform: skewX(20deg); /* Cancels the skew of the shape so the text appears horizontally */
+}
+
+.option:hover {
+    transform: skewX(-20deg) scale(1.08); /* Makes sure the skew is not overriden by the scale */
+    background: #17191b;
+    box-shadow: 0 0 4px 4px #d5842183;
+}
+
+/* Styling for the footer */
+.footer {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 50px;
+}

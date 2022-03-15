@@ -1,0 +1,146 @@
+/* All css classes used not defined in here are official bootstrap 4 classes and have been imported from their official stylesheet */
+/* Styling for the featured page */
+
+/* The info section */
+.featureinfo {
+    font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    .featureinfo {
+        font-size: 15px;
+    }
+}
+
+/* Styling for the TV content section depending on the display */
+.tvitem {
+    margin-bottom: 35px;
+    padding: 20px 10px;
+    border-radius: 4px 40px;
+    background-color: rgba(0, 0, 0, 0.116);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.281);
+}
+
+.tvcontent {
+    padding: 20px 20px;
+    border-radius: 2px 20px;
+    background-color: rgba(0, 0, 0, 0.418);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.281);
+}
+
+.tvcontent p {
+    font-size: 17px;
+}
+
+@media (max-width: 767px) {
+    .tvcontent {
+        margin: 0 10px;
+        margin-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    .tvcontent h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .tvcontent p {
+        font-size: 14px;
+        text-align: justify;
+    }
+}
+
+/* Styling for new releases section depending on the display */
+.newrelease {
+    display: flex;
+    justify-content: center;
+    border-radius: 15px 50px;
+    background-color: rgba(0, 0, 0, 0.116);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.281);
+    margin: 0 60px;
+    padding: 50px
+}
+
+.newrelease img {
+    max-width: 50%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px 50px;
+    box-shadow: 0 0 10px rgb(0, 0, 14);
+}
+
+.newreleasecontent {
+    border-radius: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 30px 0px 30px 30px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.116);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.479);
+}
+
+.newreleasecontent .release-title {
+    text-align: left;
+}
+
+.newreleasecontent p {
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+.newreleasecontent .release-date {
+    margin: 20px 0 0 0;
+    font-family: "Bebas Neue";
+    text-align: right;
+}
+
+@media (max-width: 767px) {
+    /* The images apply themselves as background images on mobile devices */
+    #releaseTreasure {
+        background-image: url("./images/newreleases/Treasure\ Island.jpeg")
+    }
+
+    #releaseMillers {
+        background-image: url("./images/newreleases/Millers.jpg")
+    }
+
+    #releaseShaun {
+        background-image: url("./images/newreleases/Shaun.jpg")
+    }
+
+    .newrelease {
+        min-height: 600px;
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin: 10px;
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .newreleasecontent {
+        margin: 20px 0 0 0;
+        backdrop-filter: blur(2px) brightness(80%);
+        text-shadow: 0px 0px 5px black;
+        padding: 10px;
+    }
+
+    .newrelease img {
+        display: none;
+    }
+
+    .newreleasecontent .release-title {
+        font-size: 36px;
+    }
+
+    .newreleasecontent p {
+        font-size: 14px;
+    }
+
+    .newreleasecontent .release-date {
+        font-size: 28px;
+    }
+}

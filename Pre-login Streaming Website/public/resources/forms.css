@@ -1,0 +1,92 @@
+/* The stylesheet for all forms */
+/* All css classes used not defined in here are official bootstrap 4 classes and have been imported from their official stylesheet */
+
+/* Styling for all forms */
+.formwrapper {
+    background-color: rgba(0, 0, 14, 0.822);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formerrormessage {
+    display: block;
+    color: rgb(255, 75, 75);
+    width: 100%;
+    text-align: right;
+    visibility: hidden;
+}
+
+/* Styling for the contact and login forms */
+.formstyle form {
+    border-radius: 4px 30px;
+    background-color:rgba(8, 33, 49,1);
+    max-width: 600px;
+    margin: auto;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(184, 184, 184, 0.712);
+}
+
+/* Styling for the login error depending on the display */
+.loginerror {
+    display: flex;
+}
+
+.loginerror .form-check{
+    width: 50%;
+}
+
+@media (max-width: 767px) {
+    .loginerror {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .loginerror .form-check{
+        width: initial;
+    }
+
+    .loginerror .formerrormessage {
+        text-align: center;
+    }
+}
+
+/* Styles specific to the subscribe form depending on the display */
+.subformstyle form {
+    padding: 40px;
+    background-color: rgba(8, 33, 49, 0.9);
+    box-shadow: 0 0 20px 20px rgba(8, 33, 49, 0.9);
+}
+
+.subformstyle .row {
+    border-radius: 4px 30px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(184, 184, 184, 0.712);
+    background-image: url("images/popcorn.jpg");
+    background-blend-mode: lighten;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.subformstyle .form-group {
+    margin-bottom: 0;
+}
+
+.subformstyle .ftext {
+    color: whitesmoke
+}
+
+@media (max-width: 767px) {
+    .subImage {
+        display: none;
+    }
+    .subformstyle form {
+        min-width: 0
+    }
+}

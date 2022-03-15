@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Css and bootstrap imports and initialisation -->
+    <html lang="en">
+    <link rel="stylesheet" href="../resources/colourfulstyle.css">
+    <link rel="stylesheet" href="../resources/navstyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<!-- Creating the buttons and text box to test the functions -->
+
+<body>
+    <title> Basic Js Testing </title>
+    <!-- Navbar and login modal, modified from w3schools -->
+    <div class="wrapper">
+        <div>
+            <div class="topnav">
+                <div>
+                    <a href="../index.html">Home</a>
+                    <a href="bootstrap.html">Bootstrap</a>
+                    <a class="active" href="javascript.html">Javascript</a>
+                </div>
+                <div>
+                    <button onclick="document.getElementById('loginModal').style.display='block'"
+                        class="loginbutton">Login</button>
+                </div>
+            </div>
+            <!-- Login modal partial -->
+            <div id="loginmodal"></div>
+            <script>
+                $(function () {
+                    $("#loginmodal").load("loginmodal.html");
+                });
+            </script>
+
+            <script>
+                var count = 0;
+
+                // A function to increase the count every time the button is pressed
+                function upCount() {
+                    count++;
+                    alert("This button has been pressed " + count + " times.");
+                }
+
+                // A function to print out the inputed text when a button is pressed
+                function noFear() {
+                    var fear = document.getElementById("statement");
+                    if (fear.elements[0].value.length == 0) {
+                        alert("Please enter a fear")
+                    } else {
+                        alert("No " + fear.elements[0].value + " to be found here!");
+                    }
+                }
+            </script>
+            <h1 style="color:black; float: left; margin: 10px;">Js testing</h1>
+            <br><br><br>
+            <div style="margin:10px">
+                <p> Counting with javascript </p>
+                <p><button type="button" onclick="upCount()">Counting</button></p>
+                <br><br>
+                <p> Enter a fear </p>
+                <form id="statement">
+                    <input type="text" name="fear" style="width:30%"></input>
+                    <p><input type="button" onclick="noFear()" value="No Fear"></input></p>
+                </form>
+            </div>
+        </div>
+        <!-- Page footer -->
+        <footer class="footer">
+            <p style="color: white">Author: Thomas Hesketh <br>
+                Contact: <a href="mailto:ZFAC146@live.rhul.ac.uk">ZFAC146@live.rhul.ac.uk</a> <br>
+                Designed as a proof of concept</p>
+        </footer>
+    </div>
+</body>
+
+</html>

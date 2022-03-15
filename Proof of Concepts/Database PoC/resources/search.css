@@ -1,0 +1,96 @@
+/* Styling for the search page */
+
+/* Styling for the whole page */
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the body */
+body {
+    background: linear-gradient(90deg, #615443, #694674);
+    font-family: avenir, helvetica, arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Styling for second level headers */
+h2 {
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Styling for the search bar */
+.search {
+    width: 31.25rem;
+    margin: 3.125rem auto;
+}
+
+/* Styling for the search box input */
+.search_input {
+    background-color: #2a3040;
+    border: 0;
+    padding: 1rem 1.25rem;
+    width: 100%;
+    margin: 0;
+    color: white;
+    font-size: 1.625rem;
+    font-weight: bold;
+    font-family: helvetica, arial, sans-serif;
+}
+
+/* Styling for when the search box is selected */
+.search_input:focus {
+    outline: 1;
+}
+
+/* Styling for each input */
+.output {
+    color: #656e80;
+    background-color: #2a3040;
+    list-style: none;
+    width: 500px;
+    padding: 10px 10px 10px 25px;
+    position: relative;
+}
+
+/* Adds a border to all but the last search result for clear seperation */
+.output:not(:last-child) {
+    border-bottom: 1px solid #373d4e;
+}
+
+/* Styling for the first elements of each output */
+.output_first {
+    justify-content: space-between;
+    display: flex;
+}
+
+/* Styling for each employee name */
+.output_empName {
+    color: white;
+    margin: 0;
+}
+
+/* Styling for the view details next to each employee results */
+.output_link_button {
+    font-size: 13px;
+}
+
+/* Styling for all outputs */
+.outputs {
+    padding: 0;
+}
+
+/* Styling for the footer */
+footer {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}

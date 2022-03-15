@@ -1,0 +1,91 @@
+ /* The styling for all the main elements of the pages */
+
+ /* Styling applying to all bodies*/
+ body {
+   background-color: white;
+   max-width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   font-family: Verdana, sans-serif;
+ }
+
+ /* Styling applying to all level one headers */
+ h1 {
+   color: white;
+   text-align: center;
+   font-size: 50px;
+   font-family: Verdana, sans-serif;
+ }
+
+ /* Styling applying to all text */
+ .p {
+   color: black;
+ }
+
+ 
+ /* The wrapper for each page */
+ .wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+ /* Styling for the left and right images of the title row*/
+ .floatleft {
+   float: left;
+ }
+
+ .floatright {
+   float: right;
+ }
+
+ .bgimage {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   /* Moves the text to the middle of the image */
+   transform: translate(-50%, -50%);
+ }
+
+ /* Container for the gallery section of the page */
+ .gallery-container {
+   position: relative;
+ }
+
+ /* Styling for the text above the gallery */
+ .textstyle1 {
+   margin-left: 10px;
+   margin-right: 10px;
+ }
+
+ /* Styling applying to all gallery images*/
+ .lowerimage {
+   margin: 10px;
+   border: 5px solid green;
+   width: 700px;
+   height: 400px;
+ }
+
+ /* Styling for centering the homepage gallery */
+ .center {
+   margin-left: auto;
+   margin-right: auto;
+   empty-cells: show;
+ }
+
+ /* Styling for the text above each gallery image */
+ .imagetext {
+   position: relative;
+   text-align: center;
+ }
+
+ /* Styling for all page footers */
+ .footer {
+   width: 100%;
+   height: 80px;
+   text-align: center;
+   background: #333;
+   font-family: "Times New Roman", Times, serif;
+ }

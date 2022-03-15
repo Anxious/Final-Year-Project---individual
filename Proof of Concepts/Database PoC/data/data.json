@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "empName": "Thomas Bradley",
+    "division": "Transactions",
+    "joinedOn": "08/06/2009",
+    "email": "jamesm@mail.org",
+    "phone": "0123456789",
+    "description": "The employee who deals with all incoming transactions"
+  },
+  {
+    "id": 1,
+    "empName": "Helen Davies",
+    "division": "Transactions",
+    "joinedOn": "09/12/2010",
+    "email": "thomasb@mail.org",
+    "phone": "0987612345",
+    "description": "The employee who deals with all outgoing transactions"
+  },
+  {
+    "id": 2,
+    "empName": "James Murphy",
+    "division": "Reception",
+    "joinedOn": "31/01/2009",
+    "email": "deans@mail.org",
+    "phone": "0987654321",
+    "description": "The employee who heads up the reception team"
+  },
+  {
+    "id": 3,
+    "empName": "Dean Smith",
+    "division": "Public Relations",
+    "joinedOn": "30/12/2008",
+    "email": "helend@mail.org",
+    "phone": "12345609876",
+    "description": "The employee responsible for the majority of our relations with the public"
+  }
+]

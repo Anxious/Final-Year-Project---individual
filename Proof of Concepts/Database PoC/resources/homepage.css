@@ -1,0 +1,109 @@
+/* Styling for the home page */
+
+/* Styling for the whole page */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* Styling for the html */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+/* Styling for the body */
+body {
+    line-height: 1.4;
+    font-family: avenir, helvetica, arial, sans-serif;
+    color: #555;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #615443, #694674);
+}
+
+/* Styling for the level 1 headers */
+h1 {
+    margin-top: 2rem;
+    font-family: "Didot", serif;
+    font-size: 6rem;
+    color: white;
+    text-align: center;
+    position: relative;
+    word-spacing: 3px;
+}
+
+/* Styling for the container for all options */
+.container {
+    width: 60rem;
+    margin: 0 auto;
+}
+
+/* Styling for the container for each option */
+.option-container {
+    margin-top: 6rem;
+}
+
+/* Styling for each option */
+.option {
+    background: linear-gradient(to bottom, darkgrey, grey);
+    margin-bottom: 5rem;
+    transform: skewX(-20deg);
+    display: flex;
+    transition: all 0.5s;
+}
+
+/* Styling for each option's title box */
+.option_title_box {
+    background: linear-gradient(to bottom, darkgrey, grey);
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+/* Styling for each option's title */
+.option_title {
+    font-family: "Megrim", sans-serif;
+    color: white;
+    font-size: 3.25rem;
+    transform: skewX(20deg);
+}
+
+/* Styling for each option's details link */
+.option_link:link,
+.option_link:visited {
+    background-color: rgb(36, 35, 35);
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 2.5rem;
+    text-align: center;
+    display: flex;
+}
+
+/* Styling for each option's details link when hovered/active */
+.option_link:hover,
+.option_link:active {
+    background-color: darkgreen;
+}
+
+/* Styling for each option's link when it expands due to hovering */
+.option_link span {
+    transform: skewX(20deg);
+}
+
+/* Styling for each option when hovered over */
+.option:hover {
+    transform: skewX(-20deg) scale(1.08);
+}
+
+/* Styling for the footer */
+.footer {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}

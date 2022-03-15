@@ -1,0 +1,100 @@
+/* All css classes used not defined in here are official bootstrap 4 classes and have been imported from their official stylesheet */
+/* Styling for the search page */
+
+/* Importing the custom roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #36393f;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    color: white;
+    min-height: 100vh;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Styling for the search bar, input and output */
+.search {
+    width: 60rem;
+    margin: 3.125rem auto;
+}
+
+.search_input {
+    background: #17191b;
+    border: 0;
+    padding: 1rem 1.25rem;
+    width: 100%;
+    margin: 0;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: helvetica, arial, sans-serif;
+}
+
+.search_input:focus {
+    outline: 1;
+}
+
+.output {
+    font-size: 160%;
+    color: white;
+    background-color: #2f3136;
+    list-style: none;
+    width: 100%;
+    padding: 10px 25px 10px 25px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Setting seperators between all outputs except the last one */
+.output:not(:last-child) {
+    border-bottom: 1px solid #d5842183;
+}
+
+.output_first {
+    justify-content: space-between;
+    display: flex;
+}
+
+.output_empName {
+    color: white;
+    margin: 0;
+    font-size: 3rem;
+}
+
+.output_link_button {
+    font-size: 2rem;
+}
+
+.outputs {
+    padding: 0;
+}
+
+/* Styling for the footer */
+footer {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}

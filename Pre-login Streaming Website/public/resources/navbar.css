@@ -1,0 +1,28 @@
+/* All css classes used not defined in here are official bootstrap 4 classes and have been imported from their official stylesheet
+Styling for the page navbar for different displays */
+@media (min-width: 576px) {
+    .navbar {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+}
+
+.navbarposition .navbar-nav .nav-link {
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.navbarposition .navbar-nav .nav-item {
+    padding-right: 2rem;
+}
+
+/* Importing the custom font file for the branding */
+@font-face {
+    font-family: "ONEDAY";
+    src: url("./ONEDAY.otf");
+}
+
+.navbar-brand {
+    font-family: 'ONEDAY', sans-serif;
+}

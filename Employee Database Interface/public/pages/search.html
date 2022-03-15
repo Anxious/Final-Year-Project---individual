@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Css and bootstrap imports and initialisation -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="navbar.css" rel="stylesheet">
+    <link href="search.css" rel="stylesheet">
+    <title>BANK XYZ Ltd employee database</title>
+</head>
+
+<body>
+    <!-- The navbar -->
+    <div class="topnav">
+        <div>
+            <a href="/">Home</a>
+            <a class="active" href="/search">Search</a>
+        </div>
+        <div class="logo">
+            <img src="https://i.imgur.com/HgDJCUI.png">
+            <div class="d-flex justify-content-center align-items-center">
+                Bank XYZ
+            </div>
+        </div>
+    </div>
+    <!-- The search page -->
+    <div class="display-2 text-center pt-5 pb-5">
+        Database Search
+    </div>
+    <div class="display-4 text-center">
+        Search using the bar below by entering an employee's:
+    </div>
+
+    <!-- The search bar -->
+    <section class="search">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="mb-5">
+                <select class="form-control" id="filterOptions"
+                    style="font-size: 2.5rem; background-color: #17191b; color: white;">
+                    <option value="name">Name</option>
+                    <option value="division">Division</option>
+                    <option value="date">Date Joined</option>
+                </select>
+            </div>
+            <input class="search_input" id="search_input" type="text" autocomplete="off">
+        </div>
+        <ul class="outputs">
+        </ul>
+    </section>
+
+    <!-- The footer -->
+    <div class="footer">
+        <footer>
+            Copyright &copy; Bank XYZ 2020
+        </footer>
+    </div>
+
+    <!-- Javascript for the search bar to function correctly -->
+    <script>
+        const input = document.querySelector("input");
+        const outputContainer = document.querySelector(".outputs");
+        const url = "/api";
+        const employees = [];
+        const filterOption = document.getElementById("filterOptions")
+
+        //Getting the data from the api (data.json file)
+        fetch(url)
+            .then((blob) => blob.json()) //Allows the data to be read by the function
+            .then((data) => employees.push(...
+                data)); //Pushes the data, using the ... to allow all repeated data to be reused
+
+        //Function to find a match between the search bar and the employees in the data using regex
+        function findMatches(objectToMatch, employees) {
+            return employees.filter((place) => {
+                if (filterOption.value === "name") {
+                    const regex = new RegExp(objectToMatch, "gi");
+                    return place.empName.match(regex);
+                } else if (filterOption.value === "division") {
+                    const regex = new RegExp(objectToMatch, "gi");
+                    return place.division.match(regex);
+                } else if (filterOption.value === "date") {
+                    const regex = new RegExp(objectToMatch, "gi");
+                    return place.joinedOn.match(regex);
+                }
+            });
+        }
+
+        //Function to dynamically create a list below the search bar depending on the search input
+        function displayMatches() {
+            //If the search bar is empty, remove all displayed values
+            if (input.value === "") {
+                outputContainer.innerHTML = "";
+                return;
+            }
+            const matching = findMatches(input.value, employees);
+            if (matching.length > 0) {
+                outputContainer.innerHTML = matching
+                    .map((output) => {
+                        //The html list for displaying the output of the search
+                        return `
+                            <li class="output">
+                                <div>
+                                    <div class="output_empName">${output.empName}</div>
+                                    <span>${output.division}</span>
+                                </div>
+                                <span class="">
+                                <a href="/employee?id=${output.id}"><button type="button" class="btn btn-warning output_link_button">View
+                                </button></a></span>
+                            </li>`;
+                    })
+                    .join("");
+            } else {
+                outputContainer.innerHTML = `
+                <li class="output" style="font-size:2rem">
+                    No matches have been found
+                </li> `
+            }
+        }
+ 
+        //Function to update the search based on the chosen filter
+        function updateFilter() {
+            if (filterOption.value === "name") {
+                input.placeholder = "Enter any name (e.g. Thomas Bradley)"
+            } else if (filterOption.value === "division") {
+                input.placeholder = "Enter any division (e.g. Management)"
+            } else if (filterOption.value === "date") {
+                input.placeholder = "Enter any part of the date (format DD/MM/YYYY)"
+            } 
+        }
+
+        //Making sure the function runs itself to update the filter (and will retain it's state when going back using the previous button)
+        setTimeout(() => {
+            updateFilter()
+        }, 0)
+
+        input.addEventListener("change", displayMatches); //Allows change in user input to change the matches
+        input.addEventListener("keyup", displayMatches); //Allows pressed key to be read correctly in user input
+        filterOption.addEventListener("change", displayMatches) //Allows changes in the displayed users based on the filter
+        filterOption.addEventListener("change", updateFilter) //Allows the placeholder of the input box to change
+
+        //Makes sure that you don't need to doubleclick the details button after searching on the site
+        input.addEventListener("keyup", () => {
+            input.blur()
+            input.focus()
+        })
+        input.focus()
+
+    </script>
+</body>
+
+</html>

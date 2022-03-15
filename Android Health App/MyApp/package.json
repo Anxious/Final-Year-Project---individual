@@ -1,0 +1,30 @@
+{
+  "name": "io.cordova.hellocordova",
+  "displayName": "HelloCordova",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^9.0.0",
+    "cordova-plugin-whitelist": "^1.3.4",
+    "@cucumber/cucumber": "^7.0.0",
+    "express": "^4.17.1",
+    "puppeteer": "^5.5.0"
+  },
+  "scripts": {
+    "test": "cucumber-js testing/features/*.feature --publish-quiet --tags \"not @manual\""
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}

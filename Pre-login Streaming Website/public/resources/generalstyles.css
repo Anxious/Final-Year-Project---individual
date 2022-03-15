@@ -1,0 +1,58 @@
+/* All css classes used not defined in here are official bootstrap 4 classes and have been imported from their official stylesheet */
+/* The stylesheet for all pages */
+html,
+body {
+    height: 100%;
+}
+
+/* General font for the content */
+.ftext {
+    font-family: "Merriweather", serif;
+    color: white;
+}
+
+/* Importing custom title font from the file */
+@font-face {
+    font-family: "ONEDAY";
+    src: url("./ONEDAY.otf");
+}
+
+.title-text {
+    font-family: 'ONEDAY', sans-serif;
+}
+
+/* Styling for the sections based on the display */
+section {
+    padding-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+    section {
+        padding-bottom: 20px;
+    }
+}
+
+/* Styling for the headings based on the display */
+.heading {
+    padding-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.subheading {
+    font-family: "Bebas Neue";
+    font-size: 42px;
+}
+
+@media (max-width: 767px) {
+    .display-4 {
+        font-size: 36px;
+    }
+
+    .subheading {
+        font-size: 28px;
+        padding-top: 10px;
+        text-align: center;
+    }
+}

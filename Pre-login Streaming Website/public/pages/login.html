@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login - WatchIt</title>
+    <meta name="description" content="An Advertisement Website">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/homepage.css">
+    <link rel="stylesheet" href="../resources/forms.css">
+    <link rel="stylesheet" href="../resources/footer.css">
+    <link rel="stylesheet" href="../resources/navbar.css">
+    <link rel="stylesheet" href="../resources/generalstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- The entire code is wrapped so it fits the whole page even on big screens, preventing whitespace -->
+    <div class="formwrapper" style="background-image: url('../resources/images/login.jpg')">
+        <div>
+            <!-- The navbar with toggle button for mobile devices -->
+            <nav class="navbar navbar-dark navbar-expand-lg navbarposition"
+                style="background-color:rgba(8, 33, 49,1)">
+                <div class="container">
+                    <a class="navbar-brand title-text" style="font-size: 40px">WatchIt</a><button data-toggle="collapse"
+                        class="navbar-toggler" data-target="#navigation">
+                        <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navigation">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link ftext" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ftext" href="features.html">Featured</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ftext" href="contact-us.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active ftext" href="login.html">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ftext" href="subscribe.html">Subscribe</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar seperator -->
+            <div style="background-color:rgb(50, 56, 94); line-height: 50%;">
+                <br>
+            </div>
+            <!-- The login form -->
+            <main class="page">
+                <section class="formstyle dark">
+                    <div class="container">
+                        <div>
+                            <div class="heading white">
+                                <b>
+                                    <h2 class="text-white display-4 title-text">Login</h2>
+                                </b>
+                            </div>
+                        </div>
+                        <form id="loginForm">
+                            <div class="alert alert-success alert-dismissible fade show" id="successful" role="alert"
+                                style="display: none;">
+                                <strong>Welcome back!</strong> <br> You successfully logged in. Start streaming now.
+                                <button type="button" class="close" 
+                                    onclick="this.parentNode.style.display = 'none'" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <!-- The email input -->
+                            <div class="form-group">
+                                <label for="email" class="ftext">Email</label><input class="form-control item"
+                                    type="email" id="email">
+                            </div>
+                            <!-- The password input  -->
+                            <div class="form-group">
+                                <label for="password" class="ftext">Password</label><input class="form-control"
+                                    type="password" id="password">
+                            </div>
+                            <!-- The 'Remember me' checkbox and the login hidden errors, paired for mobile styling
+                            N.B. The Remember me box is purely cosmetic as without there is no backend for logging in which would save the cookies -->
+                            <div class="form-group loginerror">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkbox" />
+                                    <label class="form-check-label ftext" for="checkbox">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <span class="formerrormessage" id="loginerror">Invalid email and/or password
+                                    <br><a href="contact-us.html">Request a password
+                                        reset</a></span>
+                            </div>
+                            <!-- The submission button, which checks for errors and returns alert on success -->
+                            <button class="btn btn-primary btn-block" onclick="handleLogin()" id="loginbutton"
+                                type="submit" > Log In
+                            </button>
+                        </form>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div>
+            <!-- The footer separator -->
+            <div style="background-color:rgb(50, 56, 94); line-height: 50%;">
+                <br>
+            </div>
+            <!-- The page footer -->
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <img class="rounded-circle" src="../resources/images/play.png" alt="" width="50%">
+                        </div>
+                        <div class="col-sm">
+                            <h5>Get started</h5>
+                            <ul>
+                                <!-- N.B. The footer-item class is a test class and has no associated css -->
+                                <li class="footer-item"><a href="../index.html">Home</a></li>
+                                <li class="footer-item"><a href="subscribe.html">Sign up</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm">
+                            <h5>About us</h5>
+                            <ul>
+                                <li class="footer-item"><a href="contact-us.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm">
+                            <h5>Support</h5>
+                            <ul>
+                                <li class="footer-item"><a href="../index.html#faqs">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>WatchIt © 2021 Copyright</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        /**
+         * Handles the errors and alert of the login form
+         */
+        function handleLogin() {
+            //Getting the form element inputs as constants for the error handling
+            const email = document.getElementById("email").value
+            const password = document.getElementById("password").value
+
+            //Two 'valid' set of credentials hardcoded to simulate functionality
+            const users = {
+                "admin@watch.it": "admin!",
+                "tom@mail.uk": "PASSword"
+            }
+
+            /**
+             * Checks if the email/password is a valid set, triggering an error if not
+             */
+            if (users[email] === password) {
+                document.getElementById("loginerror").style.visibility = "hidden"
+                document.getElementById("successful").style.display = "block"
+            } else {
+                document.getElementById("loginerror").style.visibility = "visible"
+            }
+
+            //Preventing refresh by default, which prevents the alert
+            document.getElementById("loginForm").addEventListener("submit", (event) => {
+                event.preventDefault()
+            })
+        }
+    </script>
+</body>
+
+</html>

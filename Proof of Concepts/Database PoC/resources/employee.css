@@ -1,0 +1,132 @@
+/* Styling for the employee page */
+
+/* Styling that affects the whole page */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    /* Inherits padding and border from width and length */
+    box-sizing: inherit; 
+}
+
+/* Styling that affects all the html */
+html {
+    font-size: 62.5%;
+    /* Includes padding and border in width and length */
+    box-sizing: border-box;
+}
+
+/* Styling that affects all the body */
+body {
+    line-height: 1.4;
+    font-family: avenir, helvetica, arial, sans-serif;
+    color: #555;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #615443, #694674);
+}
+
+/* Styling that affects level 1 headers */
+h1 {
+    margin-top: 2rem;
+    font-family: "Didot", serif;
+    font-size: 6rem;
+    color: white;
+    transform: skewY(-5deg);
+    text-align: center;
+    position: relative;
+    word-spacing: 3px;
+}
+
+/* Styling for the background shape of the employee page header */
+h1::before {
+    content: "";
+    display: block;
+    height: 70%;
+    width: 55%;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    background: linear-gradient(to bottom, darkgrey, grey);
+    opacity: 0.8;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+/* Styling for the employee container */
+.employee_container {
+    width: 95rem;
+    margin: 0 auto;
+}
+
+/* Styling for each employee's details and description */
+.employee {
+    width: 60rem;
+    margin: 0 auto;
+    margin-top: 6rem;
+    background: white;
+    box-shadow: 0 3rem 6rem 1rem rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Styling for the back button */
+.employee_return:link,
+.employee_return:visited {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 1000;
+    color: #555;
+    background-color: white;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+    border-radius: 100rem;
+    padding: 0 2rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+/* Styling for hovering and using the back button */
+.employee_return:hover,
+.employee_return:active {
+    background-color: #d9ec2e;
+}
+
+/* Styling for the employee's name at the top of the employee box */
+.employee_name {
+    background: linear-gradient(to bottom, darkgrey, grey);
+    padding: 1rem;
+    font-family: "Megrim", sans-serif;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    word-spacing: 2px;
+}
+
+/* Styling for the employee's data */
+.employee_details {
+    background-color: #eee;
+    padding: 4rem 6rem;
+    font-size: 1.9rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+}
+
+/* Styling for the employee's description */
+.employee_description {
+    padding: 5rem 6rem;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+/* Styling for the footer */
+.footer {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}

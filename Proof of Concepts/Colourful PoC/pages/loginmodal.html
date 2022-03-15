@@ -1,0 +1,23 @@
+ <!-- Login Modal, modified from w3schools -->
+<div id="loginModal" class="modal">
+    <form class="loginModal_content">
+        <div class="loginModal_container">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <button type="submit" class="loginbutton">Login</button>
+        </div>
+    </form>
+</div>
+
+<!-- Login modal disappears when clicking elsewhere -->
+<script>
+    var modal = document.getElementById('loginModal');
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>

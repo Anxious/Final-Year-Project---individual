@@ -1,0 +1,94 @@
+[
+  {
+    "id": 0,
+    "empName": "Thomas Bradley",
+    "division": "Management",
+    "joinedOn": "08/06/2007",
+    "email": "thomasb@mail.org",
+    "phone": "0123456789",
+    "description": "The head of our business who commands all operations the business undertakes, and supervises other departments.",
+    "subordinates": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": 1,
+    "empName": "Helen Davies",
+    "division": "Finances",
+    "joinedOn": "09/12/2008",
+    "email": "helend@mail.org",
+    "phone": "0987612345",
+    "description": "The head of our financial department, who looks at how the finances are doing within the business and informs the CEO.",
+    "supervisor": 0,
+    "subordinates": [
+      3,
+      4
+    ]
+  },
+  {
+    "id": 2,
+    "empName": "James Murphy",
+    "division": "Customers",
+    "joinedOn": "31/01/2009",
+    "email": "jamesm@mail.org",
+    "phone": "0987654321",
+    "description": "The head of our customer facing department, who is responsible for how we interact with our customers and our publicity.",
+    "supervisor": 0,
+    "subordinates": [
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "id": 3,
+    "empName": "Dean Smith",
+    "division": "Transactions",
+    "joinedOn": "30/12/2008",
+    "email": "deans@mail.org",
+    "phone": "12345609876",
+    "description": "Monitors all incoming and outgoing transactions from users and flagging any anomalies, as well as ensuring all money is secure.",
+    "supervisor": 1
+  },
+  {
+    "id": 4,
+    "empName": "Derek Holmes",
+    "division": "Transactions",
+    "joinedOn": "15/02/2010",
+    "email": "derekh@mail.org",
+    "phone": "12345609876",
+    "description": "Monitors all incoming and outgoing transactions from users and flagging any anomalies, as well as ensuring all money is secure.",
+    "supervisor": 1
+  },
+  {
+    "id": 5,
+    "empName": "Laurence Crick",
+    "division": "Public Relations",
+    "joinedOn": "25/05/2010",
+    "email": "deanc@mail.org",
+    "phone": "12345609876",
+    "description": "Makes sure that our customers are happy and that our advertising and public appearance is positive, as well as hosting events.",
+    "supervisor": 2
+  }
+  ,{
+    "id": 6,
+    "empName": "Poppy Miller",
+    "division": "Public Relations",
+    "joinedOn": "30/12/2011",
+    "email": "daisym@mail.org",
+    "phone": "12345609876",
+    "description": "Makes sure that our customers are happy and that our advertising and public appearance is positive, as well as hosting events.",
+    "supervisor": 2
+  },
+  {
+    "id": 7,
+    "empName": "Sarah Smith",
+    "division": "Public Relations",
+    "joinedOn": "28/09/2010",
+    "email": "sarahs@mail.org",
+    "phone": "12345609876",
+    "description": "Makes sure that our customers are happy and that our advertising and public appearance is positive, as well as hosting events.",
+    "supervisor": 2
+  }
+]

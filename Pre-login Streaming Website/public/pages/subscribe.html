@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Subscribe - WatchIt</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/forms.css">
+    <link rel="stylesheet" href="../resources/footer.css">
+    <link rel="stylesheet" href="../resources/navbar.css">
+    <link rel="stylesheet" href="../resources/generalstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- The entire code is wrapped so it fits the whole page even on big screens, preventing whitespace -->
+    <div class="formwrapper" style="background-image: url('../resources/images/cinema.jpg')">
+        <div>
+            <!-- The navbar with toggle button for mobile devices -->
+            <nav class="navbar navbar-dark navbar-expand-lg navbarposition" style="background-color:rgba(8, 33, 49,1)">
+                <div class="container">
+                    <a class="navbar-brand title-text" style="font-size: 40px">WatchIt</a><button data-toggle="collapse"
+                        class="navbar-toggler" data-target="#navigation">
+                        <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navigation">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link ftext" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ftext" href="features.html">Featured</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ftext" href="contact-us.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ftext" href="login.html">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active ftext" href="subscribe.html">Subscribe</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar seperator -->
+            <div style="background-color:rgb(50, 56, 94); line-height: 50%;">
+                <br>
+            </div>
+            <!-- The subscribe form -->
+            <main class="page">
+                <section class="subformstyle dark">
+                    <div class="container">
+                        <div>
+                            <div class="heading white">
+                                <b>
+                                    <h2 class="text-white display-4 title-text">Subscribe</h2>
+                                </b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col" style="padding: 0">
+                                <form id="subscribeForm">
+                                    <div class="alert alert-success alert-dismissible fade show" id="successful"
+                                        role="alert" style="display: none;">
+                                        <strong> Congratulations! Welcome to WatchIt, we look forward to entertaining
+                                            you!</strong>
+                                        <button type="button" class="close"
+                                            onclick="this.parentNode.style.display = 'none'" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <!-- The name input and hidden error -->
+                                    <div class="form-group">
+                                        <label for="name" class="ftext">Name</label><input class="form-control item"
+                                            type="text" id="name">
+                                        <span class="formerrormessage" id="nameerror">Your name is empty</span>
+                                    </div>
+                                    <!-- The password input and hidden error -->
+                                    <div class="form-group">
+                                        <label for="password" class="ftext">Password</label><input
+                                            class="form-control item" type="password" id="password">
+                                        <span class="formerrormessage" id="passworderror">Your password is too
+                                            short</span>
+                                    </div>
+                                    <!-- The password validation input and hidden error -->
+                                    <div class="form-group">
+                                        <label for="password2" class="ftext">Re-enter password</label><input
+                                            class="form-control item" type="password" id="password2">
+                                        <span class="formerrormessage" id="password2error">Your passwords don't
+                                            match</span>
+                                    </div>
+                                    <!-- The email input and hidden error -->
+                                    <div class="form-group">
+                                        <label for="email" class="ftext">Email</label><input class="form-control item"
+                                            type="email" id="email" placeholder="example@mail.uk">
+                                        <span class="formerrormessage mb-3" id="emailerror">Expected format:
+                                            example@mail.com</span>
+                                    </div>
+                                    <!-- The card details input and hidden error -->
+                                    <div class="card-details">
+                                        <h3 class="title"></h3>
+                                        <div class="form-row">
+                                            <div class="col-sm-7">
+                                                <div class="form-group">
+                                                    <label for="card-holder" class="ftext">Card Holder</label><input
+                                                        class="form-control" id="ccholder" type="text"
+                                                        placeholder="Name on card">
+                                                    <span class="formerrormessage" id="ccholdererror">Your name is
+                                                        empty</span>
+                                                </div>
+                                            </div>
+                                            <!-- The card expiry date input and hidden error -->
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label class="ftext">Expiry date</label>
+                                                    <div class="input-group expiration-date">
+                                                        <input class="form-control" id="ccmm" type="text" maxlength="2"
+                                                            placeholder="MM"><input class="form-control" id="ccyy"
+                                                            type="text" maxlength="2" placeholder="YY">
+                                                    </div>
+                                                    <span class="formerrormessage" id="ccdateerror">Invalid date</span>
+                                                </div>
+                                            </div>
+                                            <!-- The card number input and hidden error -->
+                                            <div class="col-sm">
+                                                <div class="form-group">
+                                                    <label for="card-number" class="ftext">Card Number</label><input
+                                                        class="form-control" type="text" id="ccnumber"
+                                                        placeholder="16 digit card number">
+                                                    <span class="formerrormessage" id="ccnumbererror">Invalid number,
+                                                        expected 16 digits</span>
+                                                </div>
+                                            </div>
+                                            <!-- The card CVC input and hidden error -->
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="cvc" class="ftext">CVC</label><input
+                                                        class="form-control" type="text" id="cccvc" placeholder="CVC">
+                                                    <span class="formerrormessage" id="cccvcerror">Invalid cvc</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- The submission button, which checks for errors and returns alert on success -->
+                                    <button class="btn btn-primary btn-block" onclick="handleSubscribe()" type="submit"
+                                        id="subscribebutton">
+                                        Sign Up
+                                    </button>
+                                </form>
+                            </div>
+                            <!-- The blank side of the form which is only image -->
+                            <div class="col subImage" style="padding: 0">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div>
+            <!-- The footer separator -->
+            <div style="background-color:rgb(50, 56, 94); line-height: 50%;">
+                <br>
+            </div>
+            <!-- The page footer  -->
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <img class="rounded-circle" src="../resources/images/play.png" alt="" width="50%">
+                        </div>
+                        <div class="col-sm">
+                            <h5>Get started</h5>
+                            <ul>
+                                <!-- N.B. The footer-item class is a test class and has no associated css -->
+                                <li class="footer-item"><a href="../index.html">Home</a></li>
+                                <li class="footer-item"><a href="subscribe.html">Sign up</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm">
+                            <h5>About us</h5>
+                            <ul>
+                                <li class="footer-item"><a href="contact-us.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm">
+                            <h5>Support</h5>
+                            <ul>
+                                <li class="footer-item"><a href="../index.html#faqs">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>WatchIt © 2021 Copyright</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        /**
+         * Handles the errors and alert of the subscribe form
+         */
+        function handleSubscribe() {
+            //Getting the form element inputs as constants for the error handling
+            const name = document.getElementById("name").value
+            const password = document.getElementById("password").value
+            const password2 = document.getElementById("password2").value
+            const email = document.getElementById("email").value
+            const ccHolder = document.getElementById("ccholder").value
+            const ccMM = document.getElementById("ccmm").value
+            const ccYY = document.getElementById("ccyy").value
+            const ccNumber = document.getElementById("ccnumber").value
+            const ccCVC = document.getElementById("cccvc").value
+
+            let valid = true //Variable used in expecting the alert on success case
+
+            //All these if statements control if the respective error should display or not, and valid will be set to false if any error triggers
+            if (validName(name)) {
+                document.getElementById("nameerror").style.visibility = "hidden"
+            } else {
+                valid = false
+                document.getElementById("nameerror").style.visibility = "visible"
+            }
+
+            if (validPassword(password)) {
+                document.getElementById("passworderror").style.visibility = "hidden"
+            } else {
+                valid = false
+                document.getElementById("passworderror").style.visibility = "visible"
+            }
+
+            if (validPassword2(password, password2)) {
+                document.getElementById("password2error").style.visibility = "hidden"
+            } else {
+                valid = false
+                document.getElementById("password2error").style.visibility = "visible"
+            }
+
+            if (validEmail(email)) {
+                document.getElementById("emailerror").style.visibility = "hidden"
+            } else {
+                valid = false
+                document.getElementById("emailerror").style.visibility = "visible"
+            }
+
+            if (validCcName(ccHolder)) {
+                document.getElementById("ccholdererror").style.visibility = "hidden"
+            } else {
+                valid = false
+                document.getElementById("ccholdererror").style.visibility = "visible"
+            }
+
+            if (validDate(ccMM, ccYY)) {
+                document.getElementById("ccdateerror").style.visibility = "hidden"
+            } else {
+                valid = false
+                document.getElementById("ccdateerror").style.visibility = "visible"
+            }
+
+            if (validNumber(ccNumber)) {
+                document.getElementById("ccnumbererror").style.visibility = "hidden"
+            } else {
+                valid = false
+                document.getElementById("ccnumbererror").style.visibility = "visible"
+            }
+
+            if (validCVC(ccCVC)) {
+                document.getElementById("cccvcerror").style.visibility = "hidden"
+            } else {
+                valid = false
+                document.getElementById("cccvcerror").style.visibility = "visible"
+            }
+
+            //Using the let valid line above to check for an error if success case is not triggered
+            if (valid) {
+                document.getElementById("successful").style.display = "block"
+            }
+
+        }
+
+        /**
+         * Returns true if a name has been entered
+         * @param name: the name entered
+         */
+        function validName(name) {
+            return name && /\S/.test(name)
+        }
+
+        /**
+         * Returns true if a password has been entered with sufficient length
+         * @param password: the password entered
+         */
+        function validPassword(password) {
+            return password.length >= 8
+        }
+
+        /**
+         * Returns true if the input matches with the first password input
+         * @param password2: the second password entered
+         */
+        function validPassword2(password, password2) {
+            return password === password2
+        }
+
+        /**
+         * Returns true if the email matches the regex for emails: (string + '@' + string + '.' + string)
+         * @param email: the email entered
+         */
+        function validEmail(email) {
+            return /\S+@\S+\.\S+/.test(email)
+        }
+
+        /**
+         * Returns true if a cc name is entered
+         * @param ccname: the name on the cc
+         */
+        function validCcName(name) {
+            return name && /\S/.test(name)
+        }
+
+        /**
+         * Returns true if a cc date is entered as a two digit number
+         * @param month, year: the expiry date on the cc
+         */
+        function validDate(month, year) {
+            return month.match(/^\d{2}$/) && 1 <= parseInt(month) && parseInt(month) <= 12 && year.match(/^\d{2}$/) &&
+                20 < parseInt(year)
+        }
+
+        /**
+         * Returns true if a cc number is a 16 digit number
+         * @param ccnumber: the number on the cc
+         */
+        function validNumber(ccnumber) {
+            return ccnumber.match(/^\d{16}$/)
+        }
+
+        /**
+         * Returns true if the cvc is a 3 digit number
+         * @param cvcnumber: the cvc number
+         */
+        function validCVC(cvcnumber) {
+            return cvcnumber.match(/^\d{3}$/)
+        }
+
+        //Preventing refresh by default, which prevents the alert
+        document.getElementById("subscribeForm").addEventListener("submit", (event) => {
+            event.preventDefault()
+        })
+    </script>
+</body>
+
+</html>

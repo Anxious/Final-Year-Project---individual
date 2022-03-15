@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+section {
+    padding-bottom: 20px;
+}
+
+@media (min-width: 576px) {
+    section {
+        padding-bottom: 100px;
+    }
+}
+
+.hero {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-bottom: 0;
+}
+
+.hero:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: currentColor;
+    z-index: 1;
+}
+
+.herotext {
+    max-width: 640px;
+    color: #fff;
+    z-index: 2;
+    padding: 40px 15px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.hero h2 {
+    margin-bottom: 30px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 576px) {
+    .hero {
+        min-height: 680px;
+    }
+
+    .herotext {
+        padding: 0;
+    }
+}
+
+.intro {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.intro h3 {
+    margin-top: 0.8em;
+    margin-bottom: 0.6em;
+}
+
+.introtext {
+    color: #3b99e0 !important;
+}
+
+.heading {
+    padding-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+@media (min-width: 576px) {
+    .heading {
+        padding-top: 80px;
+    }
+}
+
+.heading p {
+    text-align: center;
+    max-width: 420px;
+    margin: auto;
+}
+
+.heading h2 {
+    margin-bottom: 1.2rem;
+}

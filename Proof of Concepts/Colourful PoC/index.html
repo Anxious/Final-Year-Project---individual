@@ -1,0 +1,147 @@
+<!DOCTYPE html lang=en>
+
+<head>
+    <!-- Css and bootstrap imports and initialisation -->
+    <link rel="stylesheet" href="resources/colourfulstyle.css">
+    <link rel="stylesheet" href="resources/navstyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <title>A test colourful website gallery</title>
+    <!-- Navbar and login modal, modified from w3schools -->
+    <div class="wrapper">
+        <div>
+            <div class="topnav">
+                <div>
+                    <a class="active" href="index.html">Home</a>
+                    <a href="pages/bootstrap.html">Bootstrap</a>
+                    <a href="pages/javascript.html">Javascript</a>
+                </div>
+                <div>
+                    <button onclick="document.getElementById('loginModal').style.display='block'"
+                        class="loginbutton">Login</button>
+                </div>
+            </div>
+            <!-- Login modal partial -->
+            <div id="loginmodal"></div>
+            <script>
+                $(function () {
+                    $("#loginmodal").load("pages/loginmodal.html");
+                });
+            </script>
+            <!-- Creating the 3-image sequence for the homepage title -->
+            <img class="floatleft" src="https://www.positive.news/wp-content/uploads/2019/03/feat-1800x0-c-center.jpg"
+                width=25% height=240px>
+            <img class="floatright"
+                src="https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&w=1000&q=80" width=25%
+                height=240px>
+            <div class="imagetext">
+                <img src="https://cdn.getyourguide.com/img/location/5cab4b111822f.jpeg/148.jpg" width=50% height=240px>
+                <div class="bgimage">
+                    <h1>A test colourful website gallery</h1>
+                </div>
+            </div>
+            <!-- Creating the table gallery with the top-text -->
+            <div class="gallery-container">
+                <div class="content-wrap">
+                    <div class="textstyle1">
+                        <p><br>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut
+                            labore
+                            et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia
+                            deserunt mollit anim id est laborum." </p>
+                    </div>
+                </div>
+                <div style="overflow-x:auto;">
+                    <table cellspacing="0" cellpadding="0" class="center" width="device-width">
+                        <tr>
+                            <td>
+                                <div>
+                                    <p>Lake View<br>Taken 14/04</p>
+                                </div>
+                            </td>
+                            <td>
+
+                                <img class="lowerimage"
+                                    src="https://media-cdn.tripadvisor.com/media/photo-s/0e/2e/76/3b/montreux-lake-view-apartment.jpg">
+
+                            </td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+
+                            <td>
+                                <div>
+                                    <p>Mountain Valley<br>Taken 20/05</p>
+                                </div>
+                            </td>
+                            <td>
+                                <img class="lowerimage" src="https://wallpapershome.com/images/pages/pic_h/16241.jpg">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <p>Lavender<br>Taken 10/06</p>
+                                </div>
+                            </td>
+                            <td><img class="lowerimage"
+                                    src="https://www.ventos.com/ecommerce/wp-content/uploads/2019/05/shutterstock_394246651.jpg">
+                            </td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+
+                            <td>
+                                <div>
+                                    <p>Canopy Bridge<br>Taken 04/07</p>
+                                </div>
+                            </td>
+                            <td><img class="lowerimage"
+                                    src="https://media.istockphoto.com/photos/picturesque-morning-in-plitvice-national-park-colorful-spring-scene-picture-id1093110112?k=6&m=1093110112&s=612x612&w=0&h=uBH7Rj-Ew_ixjunRrD_U7alq2ZUPJ_5XgMpe9xO52QQ=">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <p>Roses<br>Taken 29/08</p>
+                                </div>
+                            </td>
+                            <td><img class="lowerimage"
+                                    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rose-color-meanings-1578080496.png?crop=0.355xw:0.473xh;0.482xw,0.360xh&resize=640:*">
+                            </td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+
+                            <td>
+                                <div>
+                                    <p>Autumn Trail<br>Taken 25/09</p>
+                                </div>
+                            </td>
+                            <td><img class="lowerimage"
+                                    src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg">
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Page footer -->
+        <footer class="footer">
+            <p style="color: white">Author: Thomas Hesketh <br>
+                Contact: <a href="mailto:ZFAC146@live.rhul.ac.uk">ZFAC146@live.rhul.ac.uk</a> <br>
+                Designed as a proof of concept</p>
+        </footer>
+    </div>
+
+</body>
+</html>

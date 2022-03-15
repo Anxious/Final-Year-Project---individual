@@ -1,0 +1,15 @@
+{
+  "name": "entertainment-website",
+  "version": "1.0.0",
+  "dependencies": {
+    "@cucumber/cucumber": "^7.0.0",
+    "express": "^4.17.1",
+    "puppeteer": "^5.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "cucumber-js testing/features/*.feature --publish-quiet --tags \"not @manual\""
+  },
+  "author": "",
+  "license": "ISC"
+}

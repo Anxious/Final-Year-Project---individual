@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Css and bootstrap imports and initialisation -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="employee.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
+    <title>{%EMPNAME%}</title>
+</head>
+
+<body>
+    <!-- The navbar -->
+    <div class="topnav">
+        <div>
+            <a href="/">Home</a>
+            <a href="/search">Search</a>
+        </div>
+    </div> <br>
+    <!-- Displaying the data for the appropriate employee from homepage or search -->
+    <div class="employee_container">
+        <h1>Employee Details</h1>
+        <figure class="employee">
+            <a href="javascript:history.back()" class="employee_return">Back</a>
+            <h2 class="employee_name">{%EMPNAME%}</h2>
+            <div class="employee_details">
+                <p>
+                    <span><b>Employee since:<br></b></span>{%JOINEDON%}
+                </p>
+                <p>
+                    <span><b>Division:<br></b></span>{%DIVISION%}
+                </p>
+                <p>
+                    <span><b>Phone:<br></b> </span>{%PHONE%}
+                </p>
+                <p>
+                    <span><b>Email:<br></b> </span>{%EMAIL%}
+                </p>
+            </div>
+            <p class="employee_description">{%DESCRIPTION%}</p>
+        </figure>
+        <br>
+        <br>
+        <!-- The footer -->
+        <div class="footer">
+            <footer>
+                Copyright &copy; Bank XYZ 2020
+            </footer>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Css and bootstrap imports and initialisation -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="employee.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
+    <title>{%EMPNAME%}</title>
+</head>
+
+<body>
+    <!-- The navbar -->
+    <div class="topnav">
+        <div>
+            <a href="/">Home</a>
+            <a href="/search">Search</a>
+        </div>
+        <div class="logo">
+            <img src="https://i.imgur.com/HgDJCUI.png">
+            <div class="d-flex justify-content-center align-items-center">
+                Bank XYZ
+            </div>
+        </div>
+    </div>
+    <!-- Displaying the data for the appropriate employee from homepage or search -->
+    <div class="employee_container">
+        <h1>Employee Details</h1>
+        <figure class="employee">
+            <a href="javascript:history.back();" id="backButton" class="employee_return">Previous</a>
+            <h2 class="employee_name">{%EMPNAME%}</h2>
+            <div class="employee_box">
+                <div class="employee_subheading">
+                    Details
+                </div>
+                <div class="employee_details_row">
+                    <div class="employee_details_name">
+                        Employee since:
+                    </div>
+                    <div class="employee_details_result">
+                        {%JOINEDON%}
+                    </div>
+                </div>
+
+                <div class="employee_details_row">
+                    <div class="employee_details_name">
+                        Division:
+                    </div>
+                    <div class="employee_details_result">
+                        {%DIVISION%}
+                    </div>
+                </div>
+
+                <div class="employee_details_row">
+                    <div class="employee_details_name">
+                        Phone:
+                    </div>
+                    <div class="employee_details_result">
+                        {%PHONE%}
+                    </div>
+                </div>
+
+                <div class="employee_details_row">
+                    <div class="employee_details_name">
+                        Email:
+                    </div>
+                    <div class="employee_details_result">
+                        {%EMAIL%}
+                    </div>
+                </div>
+            </div>
+
+            <div class="employee_box">
+                <div class="employee_subheading">
+                    Description
+                </div>
+                <div class="employee_description">
+                    {%DESCRIPTION%}
+                </div>
+            </div>
+
+            <div class="employee_box">
+                <div class="employee_subheading">
+                    Hierarchy
+                </div>
+                {%SUPERVISOR%}
+                {%SUBORDINATES%}
+            </div>
+        </figure>
+        <br>
+        <br>
+        <!-- The footer -->
+        <div class="footer">
+            <footer>
+                Copyright &copy; Bank XYZ 2020
+            </footer>
+        </div>
+        <br>
+        <br>
+</body>
+
+</html>

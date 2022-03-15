@@ -1,0 +1,220 @@
+/* All css classes used not defined in here are official bootstrap 4 classes and have been imported from their official stylesheet */
+/* Styling for the page hero for different displays */
+.hero {
+    background-color: rgba(0, 0, 14, 0.555);
+    background-blend-mode: darken;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+/* Importing custom title font from the file */
+@font-face {
+    font-family: "ONEDAY";
+    src: url("./ONEDAY.otf");
+}
+
+
+.heroslogan {
+    font-size: 80px;
+    font-family: 'ONEDAY', sans-serif;
+}
+
+@media (max-width: 767px) {
+    .heroslogan {
+        font-size: 60px;
+    }
+}
+
+.hero-content {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content .text {
+    max-width: 80vw;
+    color: #fff;
+    padding: 40px 15px;
+    text-shadow: 0 0 5px black;
+}
+
+.hero-content .text div img {
+    max-width: 300px;
+}
+
+.hero-text {
+    font-family: 'Lato', sans-serif;
+}
+
+/* A 'spin' animation for when the page is opened/refreshed */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(0.2);
+    }
+
+    80% {
+        transform: rotate(1100deg) scale(1.2);
+    }
+
+    90% {
+        transform: rotate(1070deg) scale(0.9);
+    }
+
+    100% {
+        transform: rotate(1080deg) scale(1);
+    }
+}
+
+.hero-content .text div img {
+    border-radius: 50%;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px rgba(15, 73, 109, 0.3);
+    backdrop-filter: blur(5px);
+    background-color: rgba(15, 73, 109, 0.3);
+    animation: spin 2s ease-in-out;
+}
+
+/* Styling for the information section on non-mobile devices */
+@media (min-width: 768px) {
+    .information {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: inherit;
+    }
+}
+
+/* Styling for the FAQ section for different displays */
+.faq-question {
+    padding: 15px 20px 0px 20px;
+}
+
+.faq-question p {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.faqpadding {
+    padding-top: 50px;
+}
+
+.imagecrossleft {
+    text-align: right;
+    margin-left: 60px;
+}
+
+.imagecrossright {
+    text-align: left;
+    margin-right: 60px;
+}
+
+@media (max-width: 767px) {
+    .faqpadding {
+        padding-top: 0px;
+    }
+
+    .imagecrossleft {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .imagecrossright {
+        text-align: center;
+        margin-right: 0px;
+    }
+}
+
+.imagecross {
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 991px) {
+    .imagecross {
+        display: none;
+    }
+}
+
+/* Styling for the testimonials section for different displays */
+.reviews p {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.reviews .reviewpadding {
+    padding: 10px 0 0px;
+}
+
+.reviews .item {
+    margin-bottom: 12px;
+}
+
+.reviews .item .box {
+    background-color: rgba(0, 0, 0, 0.418);
+    border-radius: 0px 20px 0px 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.281);
+    padding: 10px;
+    text-align: justify;
+}
+
+.reviews .item .author {
+    margin-top: 20px;
+    padding-left: 25px;
+}
+
+.reviews .item .name {
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: inherit;
+}
+
+.reviews .item .title {
+    font-size: 13px;
+    color: #9da9ae;
+}
+
+.reviews .item .description {
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.reviews .item img {
+    max-width: 40px;
+    float: left;
+    margin-right: 12px;
+    margin-top: -5px;
+}
+
+/* Styling for the subscribe text and button for different displays */
+.subscribe-text {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .subscribe-text span {
+        font-size: 18px;
+    }
+
+    .subscribe-wrapper {
+        flex-direction: column;
+    }
+
+    .subscribe-button {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1199px) {
+    .subscribe-text {
+        font-size: 25px;
+    }
+}
